@@ -1,0 +1,524 @@
+/* AdminOrdersPage.css */
+.admin-orders-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* 상단 헤더 */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #f8f9fa;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.back-to-shop {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-to-shop:hover {
+  background: #0056b3;
+}
+
+/* 메인 콘텐츠 */
+.admin-main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 검색 및 필터 영역 */
+.search-filter-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+  color: #666;
+  z-index: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-button:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.filter-icon {
+  font-size: 14px;
+}
+
+/* 탭 네비게이션 */
+.tabs-container {
+  display: flex;
+  gap: 0;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+}
+
+.tab:hover:not(.active) {
+  background: #f8f9fa;
+  color: #333;
+}
+
+/* 주문 목록 */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* tighter list spacing */
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px; /* compact card padding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 주문 헤더 */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px; /* tighter */
+  padding-bottom: 12px; /* tighter */
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-info {
+  flex: 1;
+}
+
+.order-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.customer-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.order-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-status-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* tighter */
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-processing {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-shipping {
+  background-color: #cce5ff;
+  color: #004085;
+  border: 1px solid #b3d7ff;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.order-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.view-details-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-details-btn:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.eye-icon {
+  font-size: 16px;
+}
+
+/* 주문 상세 정보 */
+.order-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; /* tighter grid */
+  margin-bottom: 12px; /* tighter */
+  align-items: start; /* ensure left/top alignment, not centered */
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 3px 0;
+  text-align: left;
+}
+
+.customer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customer-email,
+.customer-phone {
+  font-size: 14px;
+  color: #666;
+}
+
+.items-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.shipping-address {
+  font-size: 9px;
+  color: #666;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.order-details .product-name {
+  font-size: 13px !important; /* force small size */
+  color: #444;
+  line-height: 1.3;
+  text-align: left;
+  font-weight: 500;
+  text-transform: none !important; /* prevent accidental uppercase */
+  letter-spacing: normal;
+  margin: 0 0 8px 0;
+  max-width: 520px;
+  word-break: keep-all;
+}
+
+/* 상태 변경 드롭다운 */
+.status-dropdown-container {
+  margin-top: 8px;
+}
+
+.status-dropdown {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.status-dropdown:hover {
+  border-color: #007bff;
+}
+
+.status-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* 주문 푸터 */
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px; /* tighter */
+  border-top: 1px solid #f0f0f0;
+  margin-top: 12px; /* tighter */
+}
+
+.total-amount {
+  font-size: 16px; /* smaller price */
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.order-footer .action-buttons {
+  display: flex;
+  gap: 8px; /* tighter */
+  margin-top: 0;
+}
+
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  padding: 6px 12px; /* smaller buttons */
+  border: none;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.start-shipping {
+  background: #007bff;
+  color: white;
+}
+
+.start-shipping:hover {
+  background: #0056b3;
+}
+
+.cancel-order {
+  background: white;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.cancel-order:hover {
+  background: #f8f9fa;
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+/* 추적번호 섹션 */
+.tracking-section {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #2196f3;
+}
+
+.tracking-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+/* 빈 상태 */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 로딩 상태 */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 20px;
+  }
+  
+  .search-filter-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .order-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  
+  .order-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-status-section {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}

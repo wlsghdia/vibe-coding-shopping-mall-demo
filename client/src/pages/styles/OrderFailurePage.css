@@ -1,0 +1,343 @@
+.order-failure-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.failure-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 실패 메시지 섹션 */
+.failure-message-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.failure-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.error-mark {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.failure-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.failure-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.failure-description {
+  font-size: 1rem;
+  color: #888;
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin-top: 1rem;
+}
+
+/* 장바구니 유지 안내 */
+.cart-preserved-notice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #e8f5e8;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.notice-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.notice-content h3 {
+  font-size: 1.1rem;
+  color: #155724;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.notice-content p {
+  font-size: 0.95rem;
+  color: #155724;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 섹션 공통 스타일 */
+.error-info-section,
+.solution-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* 오류 정보 */
+.error-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.error-message-box {
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.error-text {
+  color: #c62828;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-word;
+}
+
+.order-reference,
+.error-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-reference:last-child,
+.error-time:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 해결 방법 */
+.solutions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.solution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.solution-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2196F3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.solution-content h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.solution-content p {
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 액션 버튼들 */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 150px;
+}
+
+.btn-primary {
+  background: #f44336;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #333;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: white;
+  color: #333;
+  border: 2px solid #333;
+}
+
+.btn-outline:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+/* 고객 지원 섹션 */
+.support-section {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.support-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.support-section p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #333;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .failure-container {
+    padding: 0 0.5rem;
+  }
+  
+  .failure-title {
+    font-size: 1.5rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .order-reference,
+  .error-time {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .cart-preserved-notice {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .notice-icon {
+    font-size: 1.5rem;
+  }
+}
