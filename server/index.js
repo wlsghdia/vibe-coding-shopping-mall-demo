@@ -48,7 +48,7 @@ if (process.env.JWT_SECRET && (process.env.MONGODB_ATLAS_URL || process.env.MONG
 
 const app = express();
 const HTTP_PORT = process.env.HTTP_PORT || 3002;
-const PORT = process.env.PORT || 3443; // HTTPS를 기본 포트로 설정
+const PORT = process.env.PORT || 3002; // Heroku는 process.env.PORT 사용
 
 // SSL 인증서 로드
 let httpsOptions = null;
@@ -165,10 +165,17 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 개발 환경에서는 HTTP 우선, 프로덕션에서는 HTTPS 우선
+// Heroku 환경 감지
+const isHeroku = process.env.NODE_ENV === 'production' && process.env.PORT;
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-if (isDevelopment) {
+if (isHeroku) {
+  // Heroku 환경: process.env.PORT 사용
+  app.listen(PORT, () => {
+    console.log(`🌐 서버가 포트 ${PORT}에서 실행 중입니다 (Heroku)`);
+    console.log('서버가 정상적으로 시작되었습니다!');
+  });
+} else if (isDevelopment) {
   // 개발 환경: HTTP 서버만 시작 (로컬 개발용)
   app.listen(HTTP_PORT, () => {
     console.log(`🌐 HTTP 서버가 포트 ${HTTP_PORT}에서 실행 중입니다 (개발 모드)`);
@@ -176,7 +183,7 @@ if (isDevelopment) {
     console.log('서버가 정상적으로 시작되었습니다!');
   });
 } else {
-  // 프로덕션 환경: HTTPS 우선
+  // 기타 프로덕션 환경: HTTPS 우선
   if (httpsOptions) {
     https.createServer(httpsOptions, app).listen(PORT, () => {
       console.log(`🔒 HTTPS 서버가 포트 ${PORT}에서 실행 중입니다 (프로덕션)`);
@@ -201,7 +208,6 @@ if (isDevelopment) {
 }
 
 console.log('서버 종료: Ctrl + C');
-console.log('nodemon 테스트 - 파일 변경 감지됨!');
 
 // Graceful shutdown - 완전한 종료
 const gracefulShutdown = () => {

@@ -2,9 +2,9 @@
   "name": "demo-server",
   "version": "1.0.0",
   "description": "Node.js Express MongoDB server",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "dev": "nodemon",
     "dev:http": "PORT=3002 nodemon",
     "dev:https": "PORT=3443 nodemon",
