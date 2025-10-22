@@ -77,7 +77,8 @@ app.use(cors({
     'http://localhost:5173', 
     'https://localhost:5173',
     'http://211.199.247.220:5173',
-    'http://211.199.247.20:5173'
+    'http://211.199.247.20:5173',
+    'https://vibe-coding-shopping-mall-demo-xi.vercel.app'  // Vercel URL 추가
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
