@@ -6,7 +6,7 @@ import ProductsPreview from '../components/ProductsPreview'
 import ServerStatus from '../components/ServerStatus'
 
 // API 기본 URL 설정
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3002'
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3002').replace(/\/api$/, '')
 console.log('🔍 API_BASE_URL:', API_BASE_URL) // 디버깅용
 
 const HomePage = memo(() => {
